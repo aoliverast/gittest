@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          ssh-key: ${{ GH_ACTION_PRIVATE_KEY }}
+          ssh-key: ${{ secrets.GH_ACTION_PRIVATE_KEY}}
       - name: Reset qa branch
         run: |
           git checkout main
